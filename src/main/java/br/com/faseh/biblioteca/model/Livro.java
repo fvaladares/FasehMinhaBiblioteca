@@ -23,4 +23,15 @@ public class Livro {
         this.editora = editora;
         this.edicao = edicao;
     }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", editora='" + editora + '\'' +
+                ", edicao=" + edicao +
+                ", id=" + id +
+                '}';
+    }
 }

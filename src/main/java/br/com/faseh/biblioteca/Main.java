@@ -1,7 +1,6 @@
-package org.example;
+package br.com.faseh.biblioteca;
 
 public class Main {
     public static void main(String[] args) {
-
     }
 }

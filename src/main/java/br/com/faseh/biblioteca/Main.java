@@ -57,6 +57,7 @@ public class Main {
                         biblioteca.listarLivros();
                         break;
                     case 4:
+                        printLn("Ainda não implementado.");
                         break;
                     case 5:
                         break;

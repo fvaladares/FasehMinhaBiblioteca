@@ -2,6 +2,7 @@ package br.com.faseh.biblioteca;
 
 import br.com.faseh.biblioteca.model.Biblioteca;
 import br.com.faseh.biblioteca.model.Livro;
+import jdk.jshell.spi.ExecutionControl;
 
 import java.util.Scanner;
 
@@ -46,7 +47,8 @@ public class Main {
                         exibirListaLivros(biblioteca.listarLivros());
                         break;
                     case 2:
-
+                        //TODO(NOT IMPLEMENTED YET)
+                        printLn("Listando livros emprestados...");
                         break;
                     case 3:
                         printLn("Iniciando processo de cadastro...\n");
@@ -76,7 +78,7 @@ public class Main {
 
     private static void limparCache(Scanner input) {
 //        if (input.hasNext()) {
-            input.skip("\n");
+        input.skip("\n");
 //            String trash = input.nextLine();
 //            System.out.println("Esta linha pode ser removida, usada apenas para teste!!\n valor lixo:" + trash);
 //            System.out.println();

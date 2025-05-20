@@ -49,6 +49,7 @@ public class Main {
 
                         break;
                     case 3:
+                        printLn("Iniciando processo de cadastro...\n");
                         Livro novoLivro = cadastrarNovoLivro(input);
                         biblioteca.cadastrarLivro(novoLivro);
                         biblioteca.listarLivros();
@@ -65,11 +66,21 @@ public class Main {
             } catch (Exception e) {
                 printLn("Você inseriu um caracter inválido!");
                 printLn("Tente novamente!!");
-                opt = 10;
+                limparCache(input);
+//                opt = 10;
             }
         } while (opt != 0);
 
         printLn("Programa encerrado!!!");
+    }
+
+    private static void limparCache(Scanner input) {
+//        if (input.hasNext()) {
+            input.skip("\n");
+//            String trash = input.nextLine();
+//            System.out.println("Esta linha pode ser removida, usada apenas para teste!!\n valor lixo:" + trash);
+//            System.out.println();
+//        }
     }
 
     private static void printLn(String x) {
@@ -79,20 +90,28 @@ public class Main {
     private static Livro cadastrarNovoLivro(Scanner input) {
         System.out.println();
         printLn("Cadatro de novo livro");
-        if(input.hasNext())
-            input.next();
+
+        limparCache(input);
+
+        System.out.println();
         printLn("Título: ");
         prompt();
         String titulo = input.nextLine();
 
+
+        System.out.println();
         printLn("Autor: ");
         prompt();
         String autor = input.nextLine();
 
+
+        System.out.println();
         printLn("Edição: ");
         prompt();
         int edicao = input.nextInt();
 
+        limparCache(input);
+        System.out.println();
         printLn("Editora: ");
         prompt();
         String editora = input.nextLine();
@@ -110,6 +129,7 @@ public class Main {
     }
 
     private static void exibirListaLivros(Livro[] livros) {
+        // foreach
         for (Livro livro : livros) {
             if (livro != null) {
                 System.out.println(livro);

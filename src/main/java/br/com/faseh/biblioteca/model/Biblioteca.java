@@ -22,7 +22,12 @@ public class Biblioteca {
     }
 
     public void cadastrarLivro(Livro livroNovo) {
-
+        for (int i = 0; i < livros.length ; i++) {
+            if(livros[i]==null) {
+                livros[i] = livroNovo;
+                break;
+            }
+        }
     }
 
     public Livro[] listarLivros() {

@@ -24,14 +24,15 @@ public class Livro {
         this.edicao = edicao;
     }
 
+
     @Override
     public String toString() {
         return "Livro{" +
-                "titulo='" + titulo + '\'' +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
                 ", editora='" + editora + '\'' +
                 ", edicao=" + edicao +
-                ", id=" + id +
                 '}';
     }
 }

@@ -24,6 +24,9 @@ public class Livro {
         this.edicao = edicao;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
 
     @Override
     public String toString() {

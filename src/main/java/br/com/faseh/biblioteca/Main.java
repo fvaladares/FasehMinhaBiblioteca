@@ -58,6 +58,7 @@ public class Main {
                         break;
                     case 4:
                         printLn("Ainda não implementado.");
+                        biblioteca.excluirLivro(solicitarTitulo(input));
                         break;
                     case 5:
                         break;
@@ -75,6 +76,12 @@ public class Main {
         } while (opt != 0);
 
         printLn("Programa encerrado!!!");
+    }
+
+    private static String solicitarTitulo(Scanner input) {
+        limparCache(input);
+        System.out.print("Informe o titulo do livro que deseja excluir: ");
+        return input.nextLine();
     }
 
     private static void limparCache(Scanner input) {
